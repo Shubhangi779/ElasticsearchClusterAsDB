@@ -12,5 +12,7 @@ import com.infy1.model.Library;
 public interface LibraryRepository extends  ElasticsearchRepository<Library, Integer>{
 	
 	public List<Library> findByName(String name);
+
+	//public void saveAll(List<Library> lib);
      
 }

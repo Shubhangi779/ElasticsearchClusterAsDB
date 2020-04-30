@@ -6,11 +6,11 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.stereotype.Component;
 
 @Component
-@Document(indexName= "libraryapp", type= "library")
+@Document(indexName= "library", type= "library")
 public class Library {
 
 	@Id
-	private int id;
+	private Integer id;
 	private String name;
 	private String address;
 	

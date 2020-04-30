@@ -16,7 +16,7 @@ public class LibraryServiceImpl implements LibraryService {
 	
 
 	    public void saveLibraryData(List<Library> libraryData) {
-	        repository.saveAll(libraryData);
+	        repository.save(libraryData);
 	    }
 	    
 	    

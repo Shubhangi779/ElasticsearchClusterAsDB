@@ -51,7 +51,7 @@ public class FrontController {
 	}
 
 	@GetMapping("/customSearch/{input}")
-	public List<Library> getCustomerByField(@PathVariable String input) {
+	public List<Library> getLibrayByField(@PathVariable String input) {
 		return queryService.librarySearchData(input);
 	}
 

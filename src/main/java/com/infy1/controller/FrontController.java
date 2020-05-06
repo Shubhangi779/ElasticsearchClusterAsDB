@@ -51,8 +51,19 @@ public class FrontController {
 	}
 
 	@GetMapping("/customSearch/{input}")
-	public List<Library> getLibrayByField(@PathVariable String input) {
-		return queryService.librarySearchData(input);
+	public List<Library> getLibraryByField(@PathVariable String input) {
+		return queryService.multiMatchQuery(input);
+	}
+	
+	@GetMapping("/searchWithSpecialChar/{input}")
+	public List<Library> getLibraryWithSpecialChar(@PathVariable String input){
+		return queryService.serchWithSpecialChars(input);
+	}
+	
+	@GetMapping("/customSearchCount/{input}")
+	public String getSearchWithFieldType(@PathVariable String input) {
+		return queryService.customSearchWithFieldType(input);
+		
 	}
 
 }
